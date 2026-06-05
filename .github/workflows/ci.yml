@@ -77,7 +77,7 @@ jobs:
 
       - name: Build package
         run: |
-          uvx --python 3.14 briefcase package --adhoc-sign
+          uvx briefcase package --adhoc-sign
 
       - name: Upload artefacts
         uses: actions/upload-artifact@v7.0.1

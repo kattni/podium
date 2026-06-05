@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 [project]
 dynamic = ["version"]
 name = "podium"
-requires-python = "~=3.14"
+requires-python = ">=3.12"
 # Temporary workaround for beeware/toga#4446
 dependencies = ["packaging"]
 
