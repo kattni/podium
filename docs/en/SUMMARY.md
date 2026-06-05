@@ -35,9 +35,6 @@
         - Style guides
             - [Code style guide](how-to/contribute/style/code-style-guide.md)
             - [Documentation style guide](how-to/contribute/style/docs-style-guide.md)
-<!-- Future topic guides here.
-- [Topic guides](topics/index.md)
--->
 - [Reference](reference/index.md)
 - [About](about/index.md)
     - [Why Podium?](about/why.md)
