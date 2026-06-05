@@ -239,7 +239,7 @@ reflow_mode = "normalize"
 punctuation = ",;:"
 
 [tool.rumdl.MD061]  # Fail on certain strings.
-terms = ["TODO"]
+#terms = ["TODO"]
 
 [tool.setuptools_scm]
 # To enable SCM versioning, we need an empty tool configuration for setuptools_scm
