@@ -1,10 +1,8 @@
-<!-- rumdl-disable-line MD041 -->
+<!-- rumdl-disable MD041 -->
 
 <!-- rumdl-disable MD007 -->
 
-- [About](about/index.md)
-    - [Roadmap](about/roadmap.md)
-    - [Releases](about/releases.md)
+- [Tutorial](tutorial/index.md)
 - [How-to guides](how-to/index.md)
     - [Contributing to Podium](how-to/contribute/index.md)
         - [First-time contributors](how-to/contribute/first-time-contributors.md)
@@ -37,3 +35,11 @@
         - Style guides
             - [Code style guide](how-to/contribute/style/code-style-guide.md)
             - [Documentation style guide](how-to/contribute/style/docs-style-guide.md)
+<!-- Future topic guides here.
+- [Topic guides](topics/index.md)
+-->
+- [Reference](reference/index.md)
+- [About](about/index.md)
+    - [Why Podium?](about/why.md)
+    - [Roadmap](about/roadmap.md)
+    - [Releases](about/releases.md)
