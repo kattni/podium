@@ -71,6 +71,10 @@ Open Finder, and navigate to the `examples` directory. Right-click on the `examp
 
 ![The context menu for the `example.podium` slide deck bundle.](../images/show_package_contents.png)
 
+/// caption
+
+///
+
 Within the `example.podium` bundle, you'll find the following files:
 
 ```text

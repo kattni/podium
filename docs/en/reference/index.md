@@ -4,6 +4,10 @@ TODO: Intro
 
 ## Syntax
 
+### Title slide
+
+### Bullet slides
+
 ## Keyboard shortcuts
 
 - CMD-Shift-P - Enter presentation mode; or, if in presentation mode, Pause timer
