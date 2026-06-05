@@ -38,5 +38,6 @@
 - [Reference](reference/index.md)
 - [About](about/index.md)
     - [Why Podium?](about/why.md)
+    - [Presentation demos](about/demos.md)
     - [Roadmap](about/roadmap.md)
     - [Releases](about/releases.md)
