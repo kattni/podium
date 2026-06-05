@@ -2,25 +2,25 @@
 
 A presentation tool for developers.
 
-## [Tutorial][tutorial-index]
+## [Tutorial](tutorial/index.md)
 
 Get started with a hands-on introduction for beginners.
 
-## [How-to guides][how-to]
+## [How-to guides](how-to/index.md)
 
 Guides on how to contribute.
 
 <!-- Future topic guides here
-## [Topic guides][topics]
+## [Topic guides](topics/index.md)
 
 Deeper explorations of concepts and issues related to Podium usage.
 -->
 
-## [Reference][reference-index]
+## [Reference](reference/index.md)
 
 Slide syntax guide and keyboard shortcuts.
 
-## [About Podium]
+## [About Podium](about/index.md)
 
 The reason behind Podium, and other details about the project.
 
