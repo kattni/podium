@@ -178,7 +178,7 @@ It will then start a new paragraph.
 
 * And then go back into bullets.
 
-* A [link to somewhere else](http://pybee.org)
+* A [link to somewhere else](https://beeware.org)
 
 ---
 
