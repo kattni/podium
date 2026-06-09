@@ -10,7 +10,7 @@ Each slide and associated speaker notes are separated from the next with three d
 
 A simple slide with speaker notes would be formatted as follows:
 
-```markddown
+```markdown
 # Slide title
 
 ???
@@ -22,7 +22,27 @@ Welcome to my talk.
 
 ![A simple slide in the speaker view in Podium.](../images/simple_slide.png)
 
+Speaker notes will render Markdown syntax, and can span multiple lines and include separate paragraphs.
+
 This basic format applies regardless of what syntax you include in the slide content.
+
+You can also attach annotations in the form of classes. For example, centering the title and author on a title slide would include the following:
+
+```markdown
+class: title
+
+# Talk title
+
+## Author name
+```
+
+![A title slide in Podium.](../images/title_slide_class.png)
+
+Other possible class annotations will be discussed alongside the relevant content below.
+
+### Style customization
+
+You'll find a `style.css` file within the Podium slide deck bundle. You can use this to apply style overrides to your slides.
 
 ## Markdown syntax
 
@@ -34,9 +54,123 @@ Text formatting includes *italics* (`*italics*`), **bold** (`**bold**`), ***bold
 
 ### Title slide
 
-### Bullet slides
+A basic title slide consists of a centered title and an author name. It requires `title` class annotation. It is formatted as follows:
+
+```markdown
+class: title
+
+# Talk title
+
+## Author name
+```
+
+![A title slide in Podium.](../images/title_slide_class.png)
+
+You can extend titles to multiple lines, and include multiple authors, formatted as follows:
+
+```markdown
+class: title
+
+# A very long title
+
+## made up of multiple
+
+## lines of text
+
+### First Author name
+
+### Second Author name
+
+### Third Author name
+```
+
+![A title slide with a longer title and multiple authors in Podium.](../images/multi_title_slide.png)
+
+### Bullet and number slides
+
+There are multiple ways to display content listed on a slide.
+
+Bullets are denoted by a dash (`-`), asterisk (`*`), or plus sign (`+`) at the beginning of a line. You can indent one or more items to create a nested list.
+
+#### Basic bullets
+
+A slide with a simple bullet list would be formatted as follows:
+
+```markdown
+# Title & Bullets
+
+* Introduction
+* Deep-dive
+* Deep-dive
+```
+
+![A slide with a bullet list in Podium.](../images/simple_bullet.png)
+
+A slide with a nested bullet list could be formatted as follows:
+
+```markdown
+# Title & Bullets
+
+* Introduction
+    * Subpoint
+    * Subpoint
+* Deep-dive
+    * Subpoint
+    * Subpoint
+        * Subpoint
+* Deep-dive
+```
+
+![A slide with a nested bullet list in Podium.](../images/nested_bullet.png)
+
+Markdown allows for mixing bullet notation in nested bullet lists, but each nested level *must* be consistent, as shown above.
 
 ### Images
+
+You can display images on slides.
+
+#### Columns
+
+You can display a slide with content in two columns.
+
+For example, two bullet lists displayed side by side would be formatted as follows:
+
+```markdown
+# Two lists
+
+.left-column[
+
+* Introduction with some very long text indeed
+* Deep-dive
+* Deep-dive
+
+] .right-column[
+
+* Introduction with some very long text indeed
+* Deep-dive
+* Deep-dive
+]
+```
+
+![A slide with two bullet lists displayed side by side in Podium.](../images/two_lists.png)
+
+Two images displayed side by side would be formatted as follows:
+
+```markdown
+# Two images
+
+.left-column[
+
+![A red kitten](../images/kitten.png)
+
+] .right-column[
+
+![A Fahrenheit to Celsius converter app](../images/screenshot.png) ]
+```
+
+![A slide with two images displayed side by side in Podium.](../images/two_images.png)
+
+Any valid Markdown can be displayed in either column.
 
 ### Quotation
 
@@ -98,8 +232,6 @@ TODO: Screenshot
 - CMD+Q - Quit Podium (exit presentation mode)
 - CMD+Tab - Switch displays
 - Right/Left arrows - Next/previous slide
-- Down/Up arrows - Next/previous slide
-- Enter - Next slide
 - Home/End - first/last slide
 - CMD+A - Switch aspect ratio between 16:9 and 4:3
 - CMD+R - Reload slide deck
