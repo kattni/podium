@@ -11,7 +11,7 @@ Each slide and associated speaker notes are separated from the next with three d
 A simple slide with speaker notes would be formatted as follows:
 
 ```markddown
-# Talk title
+# Slide title
 
 ???
 
