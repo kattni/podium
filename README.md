@@ -6,8 +6,6 @@
 
 A markup-based slide presentation tool.
 
-## Why?
-
 ## Quickstart
 
 Official releases of Podium can be downloaded from the [GitHub releases page](https://github.com/beeware/podium/releases).
@@ -58,11 +56,11 @@ Use [Briefcase](https://github.com/beeware/briefcase) to package this repository
 
     $ briefcase package
 
-Depending on your platform, this will produce a `macOS` folder containing a Podium DMG file, or a `linux` folder containing a system package appropriate to your distribution (a <span class="title-ref">.deb</span>, <span class="title-ref">.rpm</span> or <span class="title-ref">.pkg.zip</span> file)
+Depending on your platform, this will produce a `macOS` folder containing a Podium DMG file, or a `linux` folder containing a system package appropriate to your distribution (a .deb, .rpm or .pkg.zip file)
 
 ## Overriding Default themes
 
-Define a <span class="title-ref">style.css</span> file to override the default theme. You can use the **Debugging** section to help you create a theme that suites your style.
+Define a style.css file to override the default theme. You can use the **Debugging** section to help you create a theme that suites your style.
 
 ## Debugging
 

@@ -38,7 +38,7 @@ class: title
 
 ![A title slide in Podium.](../images/title_slide_class.png)
 
-Other possible class annotations will be discussed alongside the relevant content below.
+Other possible class annotations will be mentioned alongside the relevant content below.
 
 ### Incremental content builds
 
@@ -366,7 +366,7 @@ class Something():
 ```
 ````
 
-TODO: Screenshot
+![A code snippet on a slide in Podium.](../images/code.png)
 
 To include a Python codeblock in a bullet list, you could include the following:
 
@@ -380,7 +380,7 @@ To include a Python codeblock in a bullet list, you could include the following:
     ```
 ````
 
-TODO: Screenshot
+![A code snippet in a bullet on a slide in Podium.](../images/code_bullet.png)
 
 ### Footnotes
 
