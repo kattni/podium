@@ -316,13 +316,22 @@ Any valid Markdown can be displayed in either column.
 
 You can display quotations and attribution, formatted as follows:
 
+<!-- rumdl-disable MD013 -->
+
 ```markdown
 # Quotation
 
-> One thing was certain, that the white kitten had had nothing to do with it -- it was the black kitten's fault entirely. For the white kitten had been having its face washed by the old cat, for the last quarter of an hour (and bearing it pretty well, considering) so you see that it couldn't have had any hand in the mischief.
+> One thing was certain, that the white kitten had had nothing
+> to do with it -- it was the black kitten's fault entirely. For
+> the white kitten had been having its face washed by the old cat,
+> for the last quarter of an hour (and bearing it pretty well,
+> considering) so you see that it couldn't have had any hand in
+> the mischief.
 
 <cite>Lewis Carroll, Through the Looking Glass</cite>
 ```
+
+<!-- rumdl-enable MD013 -->
 
 ![A slide with a quotation and attribution in Podium.](../images/quotation.png)
 
