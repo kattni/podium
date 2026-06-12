@@ -284,6 +284,7 @@ For example, two bullet lists displayed side by side would be formatted as follo
 * Introduction with some very long text indeed
 * Deep-dive
 * Deep-dive
+
 ]
 ```
 
@@ -302,7 +303,9 @@ Two images displayed side by side would be formatted as follows:
 
 .right-column[
 
-![A Fahrenheit to Celsius converter app](../images/screenshot.png) ]
+![A Fahrenheit to Celsius converter app](../images/screenshot.png)
+
+]
 ```
 
 ![A slide with two images displayed side by side in Podium.](../images/two_images.png)

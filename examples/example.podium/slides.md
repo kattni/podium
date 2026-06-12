@@ -194,9 +194,7 @@ I am a very modern Major-General. I've information vegetable, animal and mineral
 
 It will then start a new paragraph.
 
-* And then go back into bullets.
-
-* A [link to somewhere else](https://beeware.org)
+* And then go back into bullets, with a [link to somewhere else](https://beeware.org)
 
 ---
 
