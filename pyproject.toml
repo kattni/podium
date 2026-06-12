@@ -229,6 +229,7 @@ disable = [
 ]
 
 [tool.rumdl.per-file-ignores]
+"docs/en/reference/index.md" = ["MD022", "MD025"]
 
 [tool.rumdl.MD013]  # Line length
 line_length = 999999

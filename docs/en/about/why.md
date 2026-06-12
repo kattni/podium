@@ -18,7 +18,5 @@ Many of these tools are also online-only. They assume that you have a good Wi-Fi
 
 Podium attempts to bridge the gap between these two poles. It is comprised of:
 
-- A simple, text-based markup format, focussed on the needs of developer
-  presentations.
-- A graphical presentation tool that has a presenter display independent
-  of the slide display.
+- A simple, text-based markup format, focussed on the needs of developer presentations.
+- A graphical presentation tool that has a presenter display independent of the slide display.

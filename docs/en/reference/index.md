@@ -40,9 +40,70 @@ class: title
 
 Other possible class annotations will be discussed alongside the relevant content below.
 
+### Incremental content builds
+
+You can introduce one element at a time on your slides with incremental content builds. For example, introducing a series of basic bullets one at a time is formatted as follows:
+
+```markdown
+# Incremental presentation
+
+* Introduce
+--
+
+* one
+--
+
+* bullet
+--
+
+* point
+--
+
+* at
+--
+
+* a
+--
+
+* time
+```
+
+![An incremental bullet list build in Podium.](../images/incremental_basic.gif)
+
+Your speaker notes must be included throughout the slide to show up at the same time as each bullet. They will not show up until the end if you put them at the end. For example, displaying your speaker notes alongside each bullet is formatted as follows:
+
+```markdown
+# Incremental presentation
+
+* First bullet
+
+???
+
+First bullet notes.
+
+--
+
+* Second bullet
+
+???
+
+## Second bullet notes.
+--
+
+* Third bullet
+
+???
+
+Third bullet notes.
+```
+
+![An incremental bullet list build with speaker notes in Podium.](../images/incremental_speaker_notes.gif)
+
 ### Style customization
 
 You'll find a `style.css` file within the Podium slide deck bundle. You can use this to apply style overrides to your slides.
+
+TODO: elaborate here
 
 ## Markdown syntax
 
@@ -60,7 +121,6 @@ A basic title slide consists of a centered title and an author name. It requires
 class: title
 
 # Talk title
-
 ## Author name
 ```
 
@@ -72,19 +132,26 @@ You can extend titles to multiple lines, and include multiple authors, formatted
 class: title
 
 # A very long title
-
-## made up of multiple
-
-## lines of text
-
-### First Author name
-
-### Second Author name
-
-### Third Author name
+# made up of multiple
+# lines of text
+## First Author name
+## Second Author name
+## Third Author name
 ```
 
 ![A title slide with a longer title and multiple authors in Podium.](../images/multi_title_slide.png)
+
+### Reverse color slide
+
+You can make a point stand out by using a title slide with a `reverse` annotation, formatted as follows:
+
+```markdown
+class: title reverse
+
+# Point of emphasis
+```
+
+![A reverse, point of emphasis title slide in Podium.](../images/reverse.png)
 
 ### Bullet and number slides
 
@@ -97,19 +164,19 @@ Bullets are denoted by a dash (`-`), asterisk (`*`), or plus sign (`+`) at the b
 A slide with a simple bullet list would be formatted as follows:
 
 ```markdown
-# Title & Bullets
+# Simple bullets
 
 * Introduction
 * Deep-dive
 * Deep-dive
 ```
 
-![A slide with a bullet list in Podium.](../images/simple_bullet.png)
+![A slide with a bullet list in Podium.](../images/basic_bullets.png)
 
 A slide with a nested bullet list could be formatted as follows:
 
 ```markdown
-# Title & Bullets
+# Nested bullets
 
 * Introduction
     * Subpoint
@@ -121,15 +188,81 @@ A slide with a nested bullet list could be formatted as follows:
 * Deep-dive
 ```
 
-![A slide with a nested bullet list in Podium.](../images/nested_bullet.png)
+![A slide with a nested bullet list in Podium.](../images/nested_bullets.png)
 
 Markdown allows for mixing bullet notation in nested bullet lists, but each nested level *must* be consistent, as shown above.
 
+#### Numbered lists
+
+A slide with a numbered list would be formatted as follows:
+
+```markdown
+# Numbered list
+
+1. Introduction
+   1. Subpoint
+   2. Subpoint
+      1. Subpoint
+      2. Subpoint
+2. Deep-dive
+3. Deep-dive
+```
+
+![A slide with a numbered list in Podium.](../images/numbered_list.png)
+
 ### Images
 
-You can display images on slides.
+You can display images on slides using standard Markdown.
 
-#### Columns
+Images are formatted as follows:
+
+```markdown
+![Image alt text](path/to/image.png)
+```
+
+#### Basic images with a caption
+
+You can include a footnote as a caption. The following would show an image of a kitten with the link to the original as a caption:
+
+```markdown
+![A red kitten](kitten.png)
+
+.footnotes[ commons.wikimedia.org/wiki/File:Red_Kitten_01.jpg ]
+```
+
+![A slide showing an image of a kitten with a footnote caption.](../images/image_kitten.png)
+
+#### Screenshots
+
+You can display a screenshot with a caption, formatted as follows:
+
+```markdown
+class: screenshot
+
+![A Fahrenheit to Celsius converter app](screenshot.png)
+
+# A screenshot
+```
+
+![A slide showing a screenshot of an app in Podium.](../images/screenshot_slide.png)
+
+This centers the image, and makes space for the caption.
+
+#### Logos
+
+You can display a logo, formatted as follows:
+
+```markdown
+class: logo
+
+![The BeeWare logo](beeware.png)
+```
+
+![A slide showing the BeeWare logo in Podium.](../images/logo.png)
+
+This emphasizes, and vertically centers the image.
+
+### Columns
 
 You can display a slide with content in two columns.
 
@@ -144,7 +277,9 @@ For example, two bullet lists displayed side by side would be formatted as follo
 * Deep-dive
 * Deep-dive
 
-] .right-column[
+]
+
+.right-column[
 
 * Introduction with some very long text indeed
 * Deep-dive
@@ -163,7 +298,9 @@ Two images displayed side by side would be formatted as follows:
 
 ![A red kitten](../images/kitten.png)
 
-] .right-column[
+]
+
+.right-column[
 
 ![A Fahrenheit to Celsius converter app](../images/screenshot.png) ]
 ```
@@ -172,7 +309,33 @@ Two images displayed side by side would be formatted as follows:
 
 Any valid Markdown can be displayed in either column.
 
-### Quotation
+### Quotations
+
+You can display quotations and attribution, formatted as follows:
+
+```markdown
+# Quotation
+
+> One thing was certain, that the white kitten had had nothing to do with it -- it was the black kitten's fault entirely. For the white kitten had been having its face washed by the old cat, for the last quarter of an hour (and bearing it pretty well, considering) so you see that it couldn't have had any hand in the mischief.
+
+<cite>Lewis Carroll, Through the Looking Glass</cite>
+```
+
+![A slide with a quotation and attribution in Podium.](../images/quotation.png)
+
+Quotations can also be included as bulleted content, formatted as follows:
+
+```markdown
+# Other inline content
+
+* A quote in a bullet
+
+    > To be, or not to be
+
+    <cite>William Shakespeare</cite>
+```
+
+![A slide with a quotation and attribution in a bullet list in Podium.](../images/quotation_bullet.png)
 
 ### Code
 
@@ -221,9 +384,62 @@ TODO: Screenshot
 
 ### Footnotes
 
-### Inline content
-
 ### Animated transitions
+
+Podium supports a number of animated transitions.
+
+Incoming transitions include:
+
+- shake
+- tada
+- swing
+- wobble
+- pulse
+- flash
+- bounce
+- bounceIn
+- bounceInUp
+- bounceInDown
+- bounceInLeft
+- bounceInRight
+- flip
+- flipInX
+- flipInY
+- fadeIn
+- fadeInUp
+- fadeInDown
+- fadeInLeft
+- fadeInRight
+- rotateIn
+- rotateInUpLeft
+- rotateInDownLeft
+- rotateInUpRight
+- rotateInDownRight
+- rollIn
+- lightSpeedIn
+
+Outgoing transitions include:
+
+- flipOutX
+- flipOutY
+- fadeOut
+- fadeOutUp
+- fadeOutDown
+- fadeOutLeft
+- fadeOutRight
+- bounceOut
+- bounceOutUp
+- bounceOutDown
+- bounceOutLeft
+- bounceOutRight
+- rotateOut
+- rotateOutUpLeft
+- rotateOutDownLeft
+- rotateOutUpRight
+- rotateOutDownRight
+- rollOut
+- lightSpeedOut
+- hinge
 
 ## Keyboard shortcuts
 
