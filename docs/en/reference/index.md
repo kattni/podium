@@ -1,6 +1,6 @@
 # Podium reference
 
-TODO: Intro
+The following is a list of all the features that a Podium slide deck can contain, as well as the controls for managing the presentation of a deck.
 
 ## Slides and speaker notes
 
@@ -87,7 +87,8 @@ First bullet notes.
 
 ???
 
-## Second bullet notes.
+Second bullet notes.
+
 --
 
 * Third bullet
@@ -101,9 +102,45 @@ Third bullet notes.
 
 ### Style customization
 
-You'll find a `style.css` file within the Podium slide deck bundle. You can use this to apply style overrides to your slides.
+You'll find the default `style.css` stylesheet within the Podium slide deck bundle. You can modify it to apply style overrides to your slides.
 
-TODO: elaborate here
+There are three primary classes available for overriding CSS: `.remark-slides-area`, `.remark-preview-area`, and `.remark-notes-area`. `.remark-slides-area` applies to the full slide-view window, and to the current slide section in the presenter window, which is located at the top-left. `.remark-preview-area` applies to the next slide preview in the presenter window, which is located at the lower-left. `.remark-notes-area` applies to the speaker notes section in the presenter window, which is located on the right.
+
+![The slide-view window with the CSS divs identified.](../images/slides_area.png)
+
+![The presenter-view window with the CSS divs identified.](../images/preview_area.png)
+
+Within `.remark-slides-area` and `.remark-preview-area`, `.remark-slide-content` applies to all slide content. Any styling applied to `.remark-slide-content` alone will apply to *both* the slides area and the preview area. If you wish to target only one, you need to specify which parent you are targeting.
+
+You can attach an arbitrary CSS class to a specific slide, and then anything you want to put into the `style.css` override, using that class, will get picked up and used on the associated slides.
+
+For example, you might want to color the text on a slide red. You could add `red-text` to the top of a slide as follows:
+
+```markdown
+class: red-text
+
+Info on this slide
+```
+
+Then, in the `style.css`, you would add the following:
+
+```css
+.remark-slide-content .red-text {
+    color: red;
+}
+```
+
+You can apply multiple classes to a single slide. If you wanted to change the color of the text on your title slide, you could add `red-text` to the top of the title slide as follows:
+
+```markdown
+class: title red-text
+
+# Title Slide
+```
+
+The `title` class is built into Podium. The same `red-text` element in `style.css` would apply to this slide as well.
+
+The default `style.css` file within the `example.podium` bundle contains the necessary CSS to modify the watermark. The [Customizing the "Made with Podium" watermark guide](../how-to/watermark.md) explains how.
 
 ## Markdown syntax
 

@@ -1,7 +1,5 @@
 # The Podium development roadmap
 
-TODO: Needs intro.
-
 In the short term, features we'd like to add include:
 
 - timing estimates based on speaker notes

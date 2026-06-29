@@ -4,7 +4,7 @@
 
 - [Tutorial](tutorial/index.md)
 - [How-to guides](how-to/index.md)
-    - [Customizing the "Made with Podium" watermark](how-to/watermark.md)
+    - [Customizing the watermark](how-to/watermark.md)
     - [Contributing to Podium](how-to/contribute/index.md)
         - [First-time contributors](how-to/contribute/first-time-contributors.md)
         - What can I do?
