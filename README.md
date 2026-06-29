@@ -1,17 +1,12 @@
 # Podium
 
-<<<<<<< Updated upstream
-
-## [![image](https://beeware.org/project/projects/applications/podium/podium.png){width="72px"}](https://beeware.org/project/projects/applications/podium)
-
-======= [![image](https://beeware.org/project/projects/applications/podium/podium.png)](https://podium.beeware.org/)
->>>>>>> Stashed changes
+[![Podium logo](icons/podium.png)](https://podium.beeware.org/)
 
 [![Discord server](https://img.shields.io/discord/836455665257021440?label=Discord%20Chat&logo=discord&style=plastic)](https://beeware.org/bee/chat/)
 
 A markup-based slide presentation tool.
 
-### Quickstart
+## Quickstart
 
 Official releases of Podium can be downloaded from the [GitHub releases page](https://github.com/beeware/podium/releases).
 
@@ -33,7 +28,7 @@ Controls from here are keyboard based:
 
 If you're on Linux, "CMD" is the Control key.
 
-### Developing Podium
+## Developing Podium
 
 Podium uses the [BeeWare](https://beeware.org) suite of tools and libraries -most notably, the [Toga](https://github.com/beeware/toga) widget toolkit, and the [Briefcase](https://github.com/beeware/briefcase) packaging tool.
 
@@ -59,7 +54,7 @@ Now that you have the code, you can clone the Podium repository and run it in de
 
 This should open the same file dialog as before.
 
-#### Packaging with Briefcase
+### Packaging with Briefcase
 
 Use [Briefcase](https://github.com/beeware/briefcase) to package this repository as a standalone application:
 
@@ -69,11 +64,11 @@ $ briefcase package
 
 Depending on your platform, this will produce a `macOS` folder containing a Podium DMG file, or a `linux` folder containing a system package appropriate to your distribution (a .deb, .rpm or .pkg.zip file).
 
-### Overriding Default themes
+## Overriding Default themes
 
 Define a `style.css` file to override the default theme. You can use the **Debugging** section to help you create a theme that suites your style.
 
-### Debugging
+## Debugging
 
 If you need to debug the CSS for a slide, you may want to use the "inspect element" feature of the webview. You may need to manually enable the feature at an operating system level:
 
@@ -83,11 +78,11 @@ If you need to debug the CSS for a slide, you may want to use the "inspect eleme
     > defaults write org.beeware.podium WebKitDeveloperExtras -bool true
     ```
 
-### Documentation
+## Documentation
 
 Documentation for Podium can be found on [Read The Docs](https://podium.beeware.org/).
 
-### Community
+## Community
 
 Podium is part of the [BeeWare suite](https://beeware.org). You can talk to the community through:
 
@@ -96,7 +91,7 @@ Podium is part of the [BeeWare suite](https://beeware.org). You can talk to the 
 
 We foster a welcoming and respectful community as described in our [BeeWare Community Code of Conduct](https://beeware.org/community/behavior/).
 
-### Contributing
+## Contributing
 
 If you experience problems with Podium, [log them on GitHub](https://github.com/beeware/podium/issues).
 
