@@ -14,11 +14,15 @@ repos:
       - id: docformatter
         args: [--in-place, --black]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.15
+    rev: v0.15.16
     hooks:
       - id: ruff-format
       - id: ruff-check
         args: [--fix]
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: v0.1.87
+    hooks:
+      - id: rumdl
   # - repo: https://github.com/codespell-project/codespell
   #   rev: v2.4.2
   #   hooks:

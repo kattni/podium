@@ -47,7 +47,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: ["macOS-latest", "windows-latest", "ubuntu-latest"]
+        include:
+          - name: macOS
+            platform: macOS-latest
+
+          - name: windows
+            platform: windows-latest
+
+          - name: ubuntu-24.04
+            platform: ubuntu-24.04
+            system-dependencies: |
+              sudo apt-get update
+              sudo apt install gir1.2-gtk-3.0 gir1.2-webkit2-4.1 \
+                libcairo2-dev libcanberra-gtk3-module libgirepository-2.0-0 \
+                libgirepository-2.0-dev
 
     steps:
       - name: Checkout
@@ -55,17 +68,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v6.2.0
-        with:
-          python-version: 3.14
+      - name: Install uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
 
-      - name: Install dependencies
+      - name: Install system dependencies
+        if: matrix.system-dependencies
+        run: ${{ matrix.system-dependencies }}
+
+      - name: Build package
         run: |
-          uvx briefcase package
+          uvx briefcase package --adhoc-sign
 
       - name: Upload artefacts
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: installer-${{ matrix.platform }}
+          name: installer-${{ matrix.name }}
           path: dist

@@ -1,0 +1,69 @@
+matrix:
+- name: markdown
+  aspell:
+    lang: en
+    d: en_US
+    mode:
+      - markdown
+      - url
+      - email
+  dictionary:
+    wordlists:
+    - docs/spelling_wordlist
+    output: _build/dictionary/python.dic
+  sources:
+  - 'docs/**/*.md'
+  - README.md
+  pipeline:
+  - pyspelling.filters.markdown:
+      markdown_extensions:
+      - markdown.extensions.toc
+      - markdown.extensions.admonition
+      - markdown.extensions.attr_list
+      - pymdownx.superfences
+      - pymdownx.blocks.admonition
+      - pymdownx.blocks.caption
+      - pymdownx.blocks.tab
+      - pymdownx.details
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+        - title
+        - alt
+      ignores:
+        - 'code'
+        - 'pre'
+        - 'nospell'
+  - pyspelling.filters.context:
+      context_visible_first: true
+      delimiters:
+        # Ignore the Jinja directives
+        - open: '{% '
+          close: ' %}'
+        # Ignores the autorefs link targets
+        - open: '\]\['
+          close: '\]'
+        # Ignore the single line Snippets syntax
+        - open: '-8<- '
+          close: '$'
+        # Ignore the .md URLs - appears to be fixed by mode: url above, leaving in place for now
+        #- open: 'https?:'
+        #  close: '\.md(:[-\w]+)?'
+        # Ignore urls in frontmatter - This is still necessary with mode: url
+        - open: 'url: '
+          close: '$'
+        # Ignore toc in frontmatter
+        - open: '- toc'
+          close: '$'
+        # Ignore numbers with a suffix, e.g. dates
+        - open: '[0-9]+'
+          close: '[rshndt]*'
+        # Ignore version numbers
+        - open: '[0-9\.]+[a-z]*'
+          close: '[0-9]*'
+        # Ignore URLs in Markdown links - This shouldn't be necessary, but here we are.
+        - open: '\]\('
+          close: '\)'
+        # Ignore attrlist class names
+        - open: '\{ \.'
+          close: '\}'

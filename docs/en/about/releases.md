@@ -1,0 +1,19 @@
+# Release History
+
+<!-- rumdl-disable MD024 -->
+
+<!-- towncrier release notes start -->
+
+## v0.3.0 (in development)
+
+- Updated to use Toga 0.5.4, and new Document-based app structure
+- Added support for Windows, and corrected many bugs on Linux.
+- Modified the "stop slideshow" shortcut to CMD-S/Alt-S
+
+## v0.2 (2 Jan 2020)
+
+- First formal release. Includes macOS and Linux support.
+
+## 0.1.0
+
+- Initial public release.

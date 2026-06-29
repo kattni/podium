@@ -5,9 +5,9 @@ class: title
 
 ???
 
-These are the speakers notes. They let the speaker know what they need to know. All work an no play makes jack a dull boy.
+These are the speakers notes. They let the speaker know what they need to know. All work and no play makes jack a dull boy.
 
-All work an no play makes jack a dull boy. All work an no play makes jack a dull boy. All work an no play makes jack a dull boy. All work an no play makes jack a dull boy. All work an no play makes jack a dull boy.
+All work and no play makes jack a dull boy. All work and no play makes jack a dull boy. All work and no play makes jack a dull boy. All work and no play makes jack a dull boy. All work and no play makes jack a dull boy.
 
 ---
 
@@ -39,9 +39,9 @@ class: title
 
 1. Introduction
    1. Subpoint
-   1. Subpoint
+   2. Subpoint
       1. Subpoint
-      1. Subpoint
+      2. Subpoint
 2. Deep-dive
 3. Deep-dive
 4. ...
@@ -50,12 +50,27 @@ class: title
 # Incremental presentation
 
 * Introduce
+
+???
+
+First bullet speaker notes.
+
 --
 
 * one
+
+???
+
+Second bullet speaker notes.
+
 --
 
 * bullet
+
+???
+
+Third bullet speaker notes, etc.
+
 --
 
 * point
@@ -82,6 +97,7 @@ class: title
 * ...
 
 ]
+
 .right-column[
 
 * Introduction with some very long text indeed
@@ -102,7 +118,7 @@ commons.wikimedia.org/wiki/File:Red_Kitten_01.jpg
 ---
 class: screenshot
 
-![A Farenheit to Celsius converter app](screenshot.png)
+![A Fahrenheit to Celsius converter app](screenshot.png)
 
 # A screenshot
 
@@ -130,14 +146,14 @@ class: logo
 ```python
 def greeting(arg):
     if arg == 'hello':
-        print 'Hello World'
+        print('Hello World')
     else:
-        print arg
+        print(arg)
 
 
-class Something(object):
+class Something():
     def __init__(self, *args, **kwargs):
-        super(Something, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
 ```
 
@@ -155,6 +171,7 @@ class Something(object):
 
 
 .footnotes[
+
 .dag1[] This isn't exactly what it sounds like. You need to consider this very carefully. And I mean _really_ carefully
 
 .dag2[] Second dagger
@@ -162,23 +179,22 @@ class Something(object):
 .dag3[] Third dagger
 
 .dag4[] Fourth dagger
+
 ]
 
 ---
 
 # Formatting
 
-* Something that is *important*
+* Something that is *important*, something that is **really important**, and something that is ***super important***.
 
-* Something that is **Really important**
+* Something that ~~isn't important at all~~.
 
-I am a very modern Major-General. I've information animal and mineral and vegetable. This text should run into multiple lines.
+I am a very modern Major-General. I've information vegetable, animal and mineral. This text should run into multiple lines.
 
 It will then start a new paragraph.
 
-* And then go back into bullets.
-
-* A [link to somewhere else](http://pybee.org)
+* And then go back into bullets, with a [link to somewhere else](https://beeware.org)
 
 ---
 
@@ -191,7 +207,7 @@ It will then start a new paragraph.
   ```python
   def greeting(arg):
       if arg == 'hello':
-          print 'Hello World'
+          print('Hello World')
   ```
 ---
 # Other inline content
@@ -375,131 +391,6 @@ class: title animated lightSpeedIn
 
 ## This is a
 # lightSpeedIn
-## transition
----
-class: title
-
-# There are also some outgoing transitions
-## But they don't work all that well...
----
-class: title animated flipOutX
-
-## This is a
-# flipOutX
-## transition
----
-class: title animated flipOutY
-
-## This is a
-# flipOutY
-## transition
----
-class: title animated fadeOut
-
-## This is a
-# fadeOut
-## transition
----
-class: title animated fadeOutUp
-
-## This is a
-# fadeOutUp
-## transition
----
-class: title animated fadeOutDown
-
-## This is a
-# fadeOutDown
-## transition
----
-class: title animated fadeOutLeft
-
-## This is a
-# fadeOutLeft
-## transition
----
-class: title animated fadeOutRight
-
-## This is a
-# fadeOutRight
-## transition
----
-class: title animated bounceOut
-
-## This is a
-# bounceOut
-## transition
----
-class: title animated bounceOutUp
-
-## This is a
-# bounceOutUp
-## transition
----
-class: title animated bounceOutDown
-
-## This is a
-# bounceOutDown
-## transition
----
-class: title animated bounceOutLeft
-
-## This is a
-# bounceOutLeft
-## transition
----
-class: title animated bounceOutRight
-
-## This is a
-# bounceOutRight
-## transition
----
-class: title animated rotateOut
-
-## This is a
-# rotateOut
-## transition
----
-class: title animated rotateOutUpLeft
-
-## This is a
-# rotateOutUpLeft
-## transition
----
-class: title animated rotateOutDownLeft
-
-## This is a
-# rotateOutDownLeft
-## transition
----
-class: title animated rotateOutUpRight
-
-## This is a
-# rotateOutUpRight
-## transition
----
-class: title animated rotateOutDownRight
-
-## This is a
-# rotateOutDownRight
-## transition
----
-class: title animated rollOut
-
-## This is a
-# rollOut
-## transition
----
-class: title animated lightSpeedOut
-
-## This is a
-# lightSpeedOut
-## transition
----
-class: title animated hinge
-
-## This is a
-# hinge
 ## transition
 ---
 class: title
