@@ -10,7 +10,7 @@ A markup-based slide presentation tool.
 
 Official releases of Podium can be downloaded from the [GitHub releases page](https://github.com/beeware/podium/releases).
 
-Download the binary for your platform of choice, and run it. This should open a file dialog, prompting you to open a `.podium` slide deck. An example Podium slide deck is also available in the releases folder. Unzip the deck, and open it in Podium.
+Download the binary for your platform of choice, and run it. This should open a file dialog, prompting you to open a `.podium` slide deck. An example Podium slide deck is also available in the `releases` folder. Unzip the deck, and open it in Podium.
 
 Controls from here are keyboard based:
 
@@ -36,17 +36,21 @@ To develop Podium, create a virtual environment, and install the BeeWare tools.
 
 Then, you can create a virtual environment and install the BeeWare tools:
 
-    $ mkdir beeware
-    $ cd beeware
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    (venv) $ pip install briefcase
+```console
+$ mkdir beeware
+$ cd beeware
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip install briefcase
+```
 
 Now that you have the code, you can clone the Podium repository and run it in developer mode:
 
-    (venv) $ git clone https://github.com/beeware/podium.git
-    (venv) $ cd podium
-    (venv) $ briefcase dev
+```console
+(venv) $ git clone https://github.com/beeware/podium.git
+(venv) $ cd podium
+(venv) $ briefcase dev
+```
 
 This should open the same file dialog as before.
 
@@ -54,13 +58,15 @@ This should open the same file dialog as before.
 
 Use [Briefcase](https://github.com/beeware/briefcase) to package this repository as a standalone application:
 
-    $ briefcase package
+```console
+$ briefcase package
+```
 
-Depending on your platform, this will produce a `macOS` folder containing a Podium DMG file, or a `linux` folder containing a system package appropriate to your distribution (a .deb, .rpm or .pkg.zip file)
+Depending on your platform, this will produce a `macOS` folder containing a Podium DMG file, or a `linux` folder containing a system package appropriate to your distribution (a .deb, .rpm or .pkg.zip file).
 
 ## Overriding Default themes
 
-Define a style.css file to override the default theme. You can use the **Debugging** section to help you create a theme that suites your style.
+Define a `style.css` file to override the default theme. You can use the **Debugging** section to help you create a theme that suites your style.
 
 ## Debugging
 
@@ -68,11 +74,13 @@ If you need to debug the CSS for a slide, you may want to use the "inspect eleme
 
 - **macOS**: at a terminal prompt, run:
 
+    ```console
     > defaults write org.beeware.podium WebKitDeveloperExtras -bool true
+    ```
 
 ## Documentation
 
-Documentation for Podium can be found on [Read The Docs](https://podium-app.readthedocs.io/en/latest/).
+Documentation for Podium can be found on [Read The Docs](https://podium.beeware.org/).
 
 ## Community
 
@@ -87,4 +95,4 @@ We foster a welcoming and respectful community as described in our [BeeWare Comm
 
 If you experience problems with Podium, [log them on GitHub](https://github.com/beeware/podium/issues).
 
-If you want to contribute, please [fork the project](https://github.com/beeware/podium) and [submit a pull request](https://github.com/beeware/podium/pulls).
+If you want to contribute, please check out the [Contribution guide](https://podium.beeware.org/how-to/contribute/).
